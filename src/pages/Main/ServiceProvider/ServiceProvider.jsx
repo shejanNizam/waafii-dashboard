@@ -4,7 +4,6 @@ import { useState } from "react";
 import { CiCircleInfo } from "react-icons/ci";
 import { useNavigate } from "react-router";
 
-// --- DUMMY DATA FOR SERVICE PROVIDERS (Using the provided data) ---
 const DUMMY_PROVIDER_DATA = [
   {
     _id: "p1",
@@ -98,7 +97,6 @@ const DUMMY_PROVIDER_DATA = [
   },
 ];
 
-// --- COLUMN DEFINITION FUNCTION (Passed through a navigation handler) ---
 const generateColumns = (showDetails, handleStatusToggle) => [
   {
     title: "#Tr.ID",
@@ -192,7 +190,6 @@ export default function ServiceProviderList() {
   const [providerData, setProviderData] = useState(DUMMY_PROVIDER_DATA);
   const isLoading = false;
 
-  // 2. Initialize the useNavigate hook
   const navigate = useNavigate();
 
   const handleSearch = (value) => {
@@ -205,7 +202,6 @@ export default function ServiceProviderList() {
     setCurrentPage(1);
   };
 
-  // 3. Update the handler to use navigate
   const showDetailsPage = (record) => {
     navigate(`/service-providers/${record.providerId}`);
   };
@@ -238,7 +234,6 @@ export default function ServiceProviderList() {
       provider.location.toLowerCase().includes(searchLower) ||
       provider.providerId.includes(searchLower);
 
-    // Filter by selected date
     const dateMatch = !selectedDate || provider.date === selectedDate;
 
     return textMatch && dateMatch;
@@ -256,7 +251,6 @@ export default function ServiceProviderList() {
           </h1>
 
           <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 w-full max-w-sm md:max-w-lg gap-2">
-            {/* Date Picker */}
             <DatePicker
               size="large"
               onChange={handleDateChange}
@@ -265,7 +259,6 @@ export default function ServiceProviderList() {
               suffixIcon={<CalendarOutlined style={{ color: "#1890ff" }} />}
             />
 
-            {/* Search Input */}
             <Input.Search
               placeholder="User Name, ID, or Location"
               allowClear

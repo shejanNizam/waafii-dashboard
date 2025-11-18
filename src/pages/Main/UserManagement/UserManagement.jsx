@@ -5,7 +5,6 @@ import {
 } from "@ant-design/icons";
 import { Avatar, DatePicker, Input, Modal, Table } from "antd";
 import { useState } from "react";
-// import { useGetAllParentsQuery } from "../../../redux/features/parentsApi/parentsApi"; // Removed Redux/RTK Query
 import { CiCircleInfo } from "react-icons/ci";
 import CustomLoading from "../../../utils/CustomLoading";
 import { InfoRow, NameCell } from "../../../utils/utils";
@@ -78,7 +77,6 @@ const DUMMY_USER_DATA = [
   },
 ];
 
-// --- UPDATED generateColumns FUNCTION ---
 const generateColumns = (showDetails) => [
   {
     title: "SL No.",
@@ -139,7 +137,6 @@ export default function UserManagement() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
 
-  // --- Dummy Data Logic ---
   const isLoading = false;
   const data = {
     data: {
