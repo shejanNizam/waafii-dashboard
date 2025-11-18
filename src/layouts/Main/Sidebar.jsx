@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { MdOutlineArrowRight } from "react-icons/md";
 import { NavLink, useLocation, useNavigate } from "react-router";
 import Swal from "sweetalert2";
-import main_logo from "../../assets/main_logo/main_logo_lms.svg";
+import main_logo from "../../assets/main_logo/main_logo_waafii_sidebar.svg";
 import { dashboardItems } from "../../constants/router.constants";
 import { logout } from "../../redux/slices/authSlice";
 import { routeLinkGenerators } from "../../utils/routeLinkGenerators";

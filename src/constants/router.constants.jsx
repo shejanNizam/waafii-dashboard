@@ -3,12 +3,17 @@ import { RiDashboardHorizontalLine } from "react-icons/ri";
 
 import { FaServicestack } from "react-icons/fa";
 import { LuUsers } from "react-icons/lu";
-import { MdOutlineSecurityUpdateWarning } from "react-icons/md";
+import {
+  MdOutlineHomeRepairService,
+  MdOutlineSecurityUpdateWarning,
+} from "react-icons/md";
+import { PiHandWithdrawDuotone } from "react-icons/pi";
 import { TbAirConditioning } from "react-icons/tb";
 import Notifications from "../components/Notifications";
 import DashboardHome from "../pages/Main/DashboardHome/DashboardHome";
 import AssignedProfessional from "../pages/Main/Parents/AssignedProfessional";
 import ServiceProvider from "../pages/Main/ServiceProvider/ServiceProvider";
+import ServiceProviderDetails from "../pages/Main/ServiceProvider/ServiceProviderDetails";
 import UserManagement from "../pages/Main/UserManagement/UserManagement";
 import WithdrawalRequests from "../pages/Main/WithdrawalRequests/WithdrawalRequests";
 import About from "../pages/Settings/About";
@@ -19,7 +24,6 @@ import EditTermsConditions from "../pages/Settings/EditTermsConditions";
 import MyProfile from "../pages/Settings/MyProfile";
 import PrivacyPolicy from "../pages/Settings/PrivacyPolicy";
 import TermsConditions from "../pages/Settings/TermsConditions";
-import Parents from "../pages/Main/Parents/Parents";
 
 export const dashboardItems = [
   {
@@ -41,20 +45,25 @@ export const dashboardItems = [
   {
     name: "Service Providers",
     path: "service-providers",
-    icon: LuUsers,
+    icon: MdOutlineHomeRepairService,
     element: <ServiceProvider />,
+  },
+  {
+    path: "service-providers/:id",
+    icon: LuUsers,
+    element: <ServiceProviderDetails />,
   },
   {
     name: "Withdrawal Requests",
     path: "withdrawal-requests",
-    icon: LuUsers,
+    icon: PiHandWithdrawDuotone,
     element: <WithdrawalRequests />,
   },
-  {
-    path: "parents/assigned-professional/:id",
-    icon: LuUsers,
-    element: <AssignedProfessional />,
-  },
+  // {
+  //   path: "parents/assigned-professional/:id",
+  //   icon: LuUsers,
+  //   element: <AssignedProfessional />,
+  // },
 
   // {
   //   name: "Sessions",
@@ -62,12 +71,12 @@ export const dashboardItems = [
   //   icon: FaRegClock,
   //   element: <Sessions />,
   // },
-  {
-    name: "Parents",
-    path: "parents",
-    icon: LuUsers,
-    element: <Parents />,
-  },
+  // {
+  //   name: "Parents",
+  //   path: "parents",
+  //   icon: LuUsers,
+  //   element: <Parents />,
+  // },
   // {
   //   path: "parents/assigned-professional/:id",
   //   icon: LuUsers,
