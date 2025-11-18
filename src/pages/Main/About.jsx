@@ -1,0 +1,44 @@
+export default function About() {
+  return (
+    <>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+      <h3>About</h3>
+    </>
+  );
+}

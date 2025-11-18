@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@theme {
+  --color-primary: oklch(0.6338 0.1177 176.34);
+  --color-secondary: oklch(0.72 0.11 178);
+  --color-danger: oklch(0.36 0.85 32);
+}
+
+.no-tailwind * {
+  all: revert !important;
+}
+
+/* Custom CSS for BiometricScanLoader */
+
+/* 1. Rotation Keyframe */
+@keyframes spin-fast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 2. Scanning Sweep Keyframe (The visual "scan" line) */
+@keyframes scan-sweep {
+  0% {
+    transform: rotate(-120deg) scaleY(0.1); /* Start outside view, short */
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(0deg) scaleY(1); /* Sweep to center, full height */
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(120deg) scaleY(0.1); /* End outside view, short */
+    opacity: 0.2;
+  }
+}
