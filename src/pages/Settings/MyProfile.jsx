@@ -2,7 +2,7 @@ import { Button, Form } from "antd";
 import { useState } from "react";
 import { FiEdit } from "react-icons/fi";
 import { useNavigate } from "react-router";
-import defaultImage from "../../assets/main_logo/main_logo_lms.svg";
+import defaultImage from "../../assets/main_logo/main_logo_waafii.svg";
 import PasswordChangeModalForm from "../../components/PasswordChangeModalForm";
 import { useGetUserByTokenQuery } from "../../redux/features/user/userApi";
 import CustomLoading from "../../utils/CustomLoading";
@@ -34,7 +34,7 @@ const MyProfile = () => {
   }
 
   return (
-    <div className="space-y-[24px] min-h-[83vh] bg-white rounded-2xl">
+    <div className="space-y-6 min-h-[83vh] bg-white rounded-2xl">
       <h1 className="text-2xl font-bold mb-4 px-4 sm:px-8 md:px-10 lg:px-14 pt-6">
         Personal Information
       </h1>
@@ -66,7 +66,7 @@ const MyProfile = () => {
                 <img
                   src={avatarImage}
                   alt="Profile"
-                  className="h-[144px] w-[144px] rounded-full"
+                  className="h-36 w-36 rounded-full"
                 />
               </div>
               <h5 className="text-lg text-[#222222]">{profileData?.name}</h5>
@@ -82,17 +82,17 @@ const MyProfile = () => {
             </Button>
           </div>
           <div className="col-span-full md:col-span-8 lg:col-span-9 ">
-            <div className="space-y-[24px]">
+            <div className="space-y-6">
               <div className="space-y-4">
                 <div>
                   <p className="text-lg font-medium mb-1">Name</p>
-                  <div className="h-[56px] rounded-lg bg-[#EFFAFF] flex items-center px-4 text-primary">
+                  <div className="h-14 rounded-lg bg-[#EFFAFF] flex items-center px-4 text-primary">
                     {profileData.name}
                   </div>
                 </div>
                 <div>
                   <p className="text-lg font-medium mb-1">Email</p>
-                  <div className="h-[56px] rounded-lg bg-[#EFFAFF] flex items-center px-4 text-primary">
+                  <div className="h-14 rounded-lg bg-[#EFFAFF] flex items-center px-4 text-primary">
                     {profileData.email}
                   </div>
                 </div>
