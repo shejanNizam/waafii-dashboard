@@ -19,6 +19,7 @@ import EditTermsConditions from "../pages/Settings/EditTermsConditions";
 import MyProfile from "../pages/Settings/MyProfile";
 import PrivacyPolicy from "../pages/Settings/PrivacyPolicy";
 import TermsConditions from "../pages/Settings/TermsConditions";
+import Parents from "../pages/Main/Parents/Parents";
 
 export const dashboardItems = [
   {
@@ -61,12 +62,12 @@ export const dashboardItems = [
   //   icon: FaRegClock,
   //   element: <Sessions />,
   // },
-  // {
-  //   name: "Parents",
-  //   path: "parents",
-  //   icon: LuUsers,
-  //   element: <Parents />,
-  // },
+  {
+    name: "Parents",
+    path: "parents",
+    icon: LuUsers,
+    element: <Parents />,
+  },
   // {
   //   path: "parents/assigned-professional/:id",
   //   icon: LuUsers,
